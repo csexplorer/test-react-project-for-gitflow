@@ -3,6 +3,7 @@ import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
 import { Button } from "./components/button";
+import { Input } from "./components/input";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -22,6 +23,7 @@ function App() {
         <Button onClick={() => setCount((count) => count + 1)}>
           Click me {count}
         </Button>
+        <Input value={count} onChange={(value) => setCount(Number(value))} placeholder="Enter your name" />
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
